@@ -1,5 +1,54 @@
 # Keystone (Identity Service)
+- name: install keystone
+  yum:
+    name:
+      - openstack-keystone
+      - httpd
+      - mod_wsgi
+    state: present
+  
+- name: restart httpd
+  service:
+    name: httpd
+    state: restarted
 
 # Glance (Imaging Service)
+  - name: install glance
+    yum:
+      name: openstack-glance
+      state: present
+  
+- name: restart glance
+    service:
+      name: openstack-glance-api
+      state: started
 
 # Nova (Compute Service)
+- name: install nova
+  yum:
+    name:
+      - openstack-nova-api
+      - openstack-nova-conductor
+      - openstack-nova-novncproxy
+      - openstack-nova-scheduler
+    state: present
+    
+- name: restart nova-api service
+  service:
+    name: openstack-nova-api
+    state: started
+
+- name: restart nova-scheduler service
+  service:
+    name: openstack-nova-scheduler
+    state: started
+
+- name: restart nova-conductor service
+  service:
+    name: openstack-nova-conductor
+    state: started
+
+- name: restart nova-novncproxy service
+  service:
+    name: openstack-nova-novncproxy
+    state: started
