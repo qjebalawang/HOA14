@@ -19,7 +19,7 @@
     state: present
 
 - name: restart glance
-    service:
+  service:
       name: openstack-glance-api
       state: started
 
