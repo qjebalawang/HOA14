@@ -21,7 +21,7 @@
     state: restarted
 
 # Nova (Compute Service)
-- name: install nova (Ubuntu)
+- name: install nova
   apt:
     name:
       - nova-api
