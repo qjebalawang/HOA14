@@ -27,28 +27,28 @@
 - name: install nova
   yum:
     name:
-      - openstack-nova-api
-      - openstack-nova-conductor
-      - openstack-nova-novncproxy
-      - openstack-nova-scheduler
-    state: present
+      #- openstack-nova-api
+      #- openstack-nova-conductor
+      #- openstack-nova-novncproxy
+      #- openstack-nova-scheduler
+    #state: present
 
 - name: restart nova-api service
   service:
-    name: openstack-nova-api
-    state: started
+    #name: openstack-nova-api
+    #state: started
 
 - name: restart nova-scheduler service
   service:
-    name: openstack-nova-scheduler
-    state: started
+    #name: openstack-nova-scheduler
+    #state: started
 
 - name: restart nova-conductor service
   service:
-    name: openstack-nova-conductor
-    state: started
+    #name: openstack-nova-conductor
+    #state: started
 
 - name: restart nova-novncproxy service
   service:
-    name: openstack-nova-novncproxy
-    state: started
+    #name: openstack-nova-novncproxy
+    #state: started
