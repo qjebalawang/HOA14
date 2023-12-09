@@ -1,6 +1,6 @@
 # Keystone (Identity Service)
 - name: install keystone
-  yum:
+  dnf:
     name:
       - openstack-keystone
       - httpd
@@ -14,7 +14,7 @@
 
 # Glance (Imaging Service)
 - name: install glance
-  yum:
+  dnf:
     name: openstack-glance
     state: present
 
@@ -25,7 +25,7 @@
 
 # Nova (Compute Service)
 - name: install nova
-  yum:
+  dnf:
     name:
       - openstack-nova-api
       - openstack-nova-conductor
