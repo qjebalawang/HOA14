@@ -88,10 +88,10 @@
   tags:
     - environment_configuration
 
-  - name: Restart Apache
-    service:
-      name: httpd
-      state: restarted
+- name: Restart Apache
+  service:
+    name: httpd
+    state: restarted
 
 
 # Glance (Imaging Service)
