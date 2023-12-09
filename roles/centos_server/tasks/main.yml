@@ -2,7 +2,6 @@
 - name: install keystone
   yum:
     name:
-      - openstack-keystone
       - httpd
       - mod_wsgi
     state: present
