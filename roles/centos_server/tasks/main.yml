@@ -2,6 +2,7 @@
 - name: install keystone
   yum:
     name:
+      #- openstack-keystone
       - httpd
       - mod_wsgi
     state: present
@@ -14,7 +15,7 @@
 # Glance (Imaging Service)
 - name: install glance
   yum:
-    name: openstack-glance
+    name: #openstack-glance
     state: present
 
 - name: restart glance
