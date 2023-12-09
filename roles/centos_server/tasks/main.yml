@@ -26,7 +26,6 @@
 # Nova (Compute Service)
 - name: install nova
   yum:
-    name:
       #- openstack-nova-api
       #- openstack-nova-conductor
       #- openstack-nova-novncproxy
