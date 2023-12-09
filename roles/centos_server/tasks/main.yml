@@ -88,7 +88,6 @@
   tags:
     - environment_configuration
 
-handlers:
   - name: Restart Apache
     service:
       name: httpd
